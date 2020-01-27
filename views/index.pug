@@ -18,23 +18,16 @@ block content
                 thead
                     tr
                         th(scope='col') Id
-                        th(scope='col') Todo
+                        th(scope='col') Tache(s)
                         th(scope='col') Editer
                         th(scope='col') Supprimer
                 tbody
-                    tr
-                        th(scope='row') 1
-                        td Mark
-                        td Otto
-                        td mdo
-                    tr
-                        th(scope='row') 2
-                        td Jacob
-                        td Thornton
-                        td mdo
-                    tr
-                        th(scope='row') 3
-                        td Larry
-                        td The bird
-                        td twitter
+                    each tache in taches
+                        tr
+                            th(scope='row')= tache.id
+                            td= tache.title
+                            td
+                                button.btn.btn-info Editer
+                            td
+                                button.btn.btn-danger Supprimer
                     

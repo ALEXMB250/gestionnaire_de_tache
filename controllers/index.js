@@ -2,7 +2,15 @@
 const Repertoire = require('../models/Repertoire');
 
 const getIndex = (req, res) =>{
-    res.render('index');
+    Repertoire.find({}, (err, taches) => {
+        if(err) console.log(err);
+        console.log(taches);
+        res.render('index', {
+            // collections des taches stocker
+            taches : taches
+        });
+    })
+    
 }
 
 const postIndex = (req, res) => {
