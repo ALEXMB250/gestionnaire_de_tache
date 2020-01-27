@@ -12,6 +12,18 @@ const getEdit = (req, res) => {
     
 } 
 
+const putEdit = (req, res) => {
+    const { id } = req.params;
+    const { title } = req.body;
+    Repertoire.findByIdAndUpdate(id, {title: title}, (err) =>{
+        if (err) console.log(err);
+         res.redirect('/');
+    });
+
+    console.log;
+}
+
 module.exports = {
-    getEdit: getEdit
+    getEdit: getEdit,
+    putEdit: putEdit
 }

@@ -12,4 +12,6 @@ router.delete('/supprimer/:id', indexController.deleteIndex);
 
 router.get('/editer/:id', editController.getEdit);
 
+router.put('/editer/:id', editController.putEdit);
+
 module.exports = router;
