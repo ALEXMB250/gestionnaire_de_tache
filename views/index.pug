@@ -29,6 +29,6 @@ block content
                             td
                                 button.btn.btn-info Editer
                             td
-                                form(action="/supprimer", action="POST")
+                                form(method="POST", action="/supprimer/" + tache.id + "?_method=DELETE",)
                                     button.btn.btn-danger Supprimer
                     

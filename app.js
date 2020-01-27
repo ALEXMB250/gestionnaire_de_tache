@@ -13,6 +13,8 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.use(methodOverride('_method'));
+
 app.set('view engine', 'pug');
 
 const indexRoute = require("./routes/index");

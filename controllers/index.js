@@ -28,9 +28,18 @@ const postIndex = (req, res) => {
     });
 }
 
+const deleteIndex = (req, res) => {
+    const { id } = req.params;
+    Repertoire.findByIdAndDelete(id, (err) =>{
+        if (err) console.log(err);
+         res.redirect('/');
+    })
+}
+
 //exporter les fonctions
 
 module.exports = {
     getIndex: getIndex,
-    postIndex: postIndex    
+    postIndex: postIndex,
+    deleteIndex: deleteIndex
 }
