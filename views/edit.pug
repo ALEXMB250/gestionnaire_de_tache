@@ -7,8 +7,8 @@ block content
                 .card-header
                     h3 Editer une tache
                 .card-body
-                    form( method="POST", action="/editer/" + todo.id + "?_method=PUT")
+                    form( method="POST", action="/editer/?_method=PUT")
                         .form-group
-                            label(for='todo') Editer une tache:
-                            input.form-control#todo(type='text', value=todo.title, name="title")
+                            label Editer une tache:
+                            input.form-control#todo(type='text', name="title")
                         button(type="submit").btn.btn-primary.btn-block Editer
