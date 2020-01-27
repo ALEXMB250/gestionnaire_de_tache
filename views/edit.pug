@@ -10,5 +10,5 @@ block content
                     form( method="POST", action="/editer/?_method=PUT")
                         .form-group
                             label Editer une tache:
-                            input.form-control#todo(type='text', name="title")
+                            input.form-control#todo(type='text', value = tache.title, name="title")
                         button(type="submit").btn.btn-primary.btn-block Editer
