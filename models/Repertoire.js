@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const todoSchema = new mongoose.Schema({
+const RepertoireSchema = new mongoose.Schema({
     title: {
         type : String,
         require : true
     }
 });
 
-module.exports = mongoose.model('taches', todoSchema);
+module.exports = mongoose.model('tache', RepertoireSchema);
